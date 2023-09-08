@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tabish_Console", "Tabish_Console\Tabish_Console.csproj", "{F805EA62-8E68-4F38-B8BB-FB8C7CD7562A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F805EA62-8E68-4F38-B8BB-FB8C7CD7562A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F805EA62-8E68-4F38-B8BB-FB8C7CD7562A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F805EA62-8E68-4F38-B8BB-FB8C7CD7562A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F805EA62-8E68-4F38-B8BB-FB8C7CD7562A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D759E9B-D556-4017-8626-EC3D1C5B5424}
+	EndGlobalSection
+EndGlobal
