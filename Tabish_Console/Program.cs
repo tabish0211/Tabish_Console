@@ -66,6 +66,7 @@ namespace Tabish_Console
             Console.WriteLine("Please enter five digit number");
             int num = Convert.ToInt32(Console.ReadLine());//12345--1+2+3+4+5
             Console.WriteLine($"Input Given={num}");
+           // Arulchozhan
             int a = num % 10;//5;
             num = num / 10;//1234
             int b = num % 10;//4
