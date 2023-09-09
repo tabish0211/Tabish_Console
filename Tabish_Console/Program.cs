@@ -15,14 +15,48 @@ namespace Tabish_Console
             //WAP to find the aggregate marks and percentage of the student assuming  number subjet=5 and each subject=max marks 100
             // CalculateMarks();
             //WAP input5 digit number---calculate the sum of the digits---11111=5
-            CalculateSumofFiveDigitsNumber();//CamelCase---Methods.Class<namespace
+            // CalculateSumofFiveDigitsNumber();//CamelCase---Methods.Class<namespace
             //variables---pascalCase
             //python---sum_of_digits----snake_case
+            //WAP for reverse the three digits
+            // ReverseTheDigits();
 
+            //CalculateExpressioForIncrementOperator();
+
+            BoolDemo();
             // SampleCodeDay_One();
             Console.ReadLine();
 
         }
+
+        static void BoolDemo()
+        {
+            bool flag=false;
+            int a = 3, b = 5;
+            flag = (a != b) && b > 2;//&& T --T===T   || If any one is True ---T
+            Console.WriteLine(flag);
+            
+
+        }
+
+        static void CalculateExpressioForIncrementOperator()
+        {
+            int x = 1;
+            int y = x + ++x + x + x++ + 2 * (++x);//1+1---2
+
+            //Console.WriteLine(y);
+            //Console.WriteLine(x);
+            //int m = 1;
+            //int z = m + ++m;//1+2=3
+            //Console.WriteLine(z);
+
+
+
+
+
+        }
+
+
 
         //assignment
         //Get 5 digits number from user and do the summation for first and last digit
@@ -44,6 +78,23 @@ namespace Tabish_Console
             int sum = a + b + c + d + num;
 
             Console.WriteLine($"Sum of the 5 digits ={sum} ");
+
+        }
+
+        static void ReverseTheDigits()
+        {
+            Console.WriteLine("Please enter 3 digit number");
+            int num = Convert.ToInt32(Console.ReadLine());//123
+            Console.WriteLine($"Input Given={num}");
+            int a = num % 10;//last digit---3
+            num = num / 10;//reduced to 2 digit--12
+            int b = num % 10;//extraction of middle one---2
+            num = num / 10;//reduce to single---first digit in the given input---1
+                           //last*100+b*10+1st
+            int reverseNumber = a * 100 + b * 10 + num;
+
+
+            Console.WriteLine($"Reverse number ={reverseNumber} ");
 
         }
 
@@ -70,7 +121,7 @@ namespace Tabish_Console
 
             double aggreagteMarks = m1 + m2 + m3 + m4 + m5;
 
-            double percentage = (aggreagteMarks*100 / 500);
+            double percentage = (aggreagteMarks * 100 / 500);
 
             Console.WriteLine($"Marks Obtained = {aggreagteMarks} and percentage obtained ={percentage}");
         }
