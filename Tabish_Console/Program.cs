@@ -2,7 +2,7 @@
 using System;
 namespace Tabish_Console
 {
-    class Program
+    class Program : Table
     {
         //OS___CLR---Main
         static void Main()
@@ -23,9 +23,184 @@ namespace Tabish_Console
 
             //CalculateExpressioForIncrementOperator();
 
-            BoolDemo();
+            //BoolDemo();
+
+            //Decision control Demo
+            //DecisionControl();
+            //Looping Sytax
+
+            //int x1,x2,x3,x54---
+            //    x1 = 2 * 1;
+            //Console.WriteLine(x1);
+            //x1 = 2 * 2;
+            //Console.WriteLine(x1);
+            // LoopDemo();
+
+
+
+            //Method types
+            //No return --no parameters---void xyz()
+            //No return--with paarmeters---void xyz(int x)
+            //with return--no parameters---int xyz()
+            //with return ---with parameters---int xyz(int y)
             // SampleCodeDay_One();
+
+            //Console.WriteLine("Enter roll number");
+            //int rollNumber = Convert.ToInt32(Console.ReadLine());//10
+            // DisplayData(rollNumber); //Pass by Value--10
+
+            Console.WriteLine("Enter the number for which you want a table to print");
+            int number = Convert.ToInt32(Console.ReadLine());
+             string message=Table(number);
+
+            Console.WriteLine(message);
+            //Console.WriteLine("");
             Console.ReadLine();
+
+        }
+
+        static void DisplayData(int rollNumber)
+        {
+           // rollNumber += 1;
+            Console.WriteLine($"Welcome roll number :{rollNumber}");
+        ///welcome roll number---user passed roll number
+        }
+
+        static void LoopDemo()
+        {
+
+            //top testing
+            //for (int i = 1; i < 11; i++)
+            //{
+            //    console.writeline(2*i);
+            //}
+
+            //int i = 1;
+            //do
+            //{
+            //    Console.WriteLine(2*i);
+            //    i++;
+
+            //} while (i<11);//bottom testing
+
+            //int i = 1;
+            //char a = 'a';
+            //char b = 'b';
+            ////top testing
+            //while (a<b)
+            //{
+            //    Console.WriteLine(2*i);
+            //    i++;
+            //}
+
+
+            //foreach (var item in "Tabish")
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+            //for (int i = 1; i < 11; i++)
+            //{
+            //    if (i==6)
+            //    {
+            //        break;
+            //    }
+            //    Console.WriteLine(i);//1,2,3,4,5,6,7,8,9,10-----1,2,3,4,5
+            //}
+
+            //for (int i = 1; i < 11; i++)
+            //{
+            //    if (i == 6 || i==9)
+            //    {
+            //        continue;
+            //    }
+            //    Console.WriteLine(i);//1,2,3,4,5,6,7,8,9,10-----1,2,3,4,5,7,8,10
+            //}
+        }
+
+        static void DecisionControl()
+        {
+            if (true)
+            {
+                //true--if block 
+                //logic exceute --if this condition true
+            }
+            else
+            {
+                //false condition
+            }
+
+
+            //Ladder if else
+            if (true)
+            {
+                //1st situation
+            }
+
+            else if(true)
+            {
+                //second situation
+
+            }
+
+            else
+            {
+
+            }
+
+
+            //Nested if-else
+
+
+            //rahim,suresh,mahesh
+            if (true)
+            {
+                //above scenario gets true
+                //plese check
+
+                if (true)
+                {
+
+                }
+
+                else
+                {
+
+                }
+            }
+
+            //Switch statement---as alternative for ladder if -else
+
+            //switch (switch_on)
+            //{
+            //    case 1:
+            //        //do this
+            //        break;
+
+            //    case 2:
+            //        //do this
+            //        break;
+
+            //    case 3:
+            //        //do this
+            //        break;
+
+            //    case 4:
+            //        //do this
+            //        break;
+
+            //    default:
+            //        //to-do
+            //        break;
+            //}
+
+            //conditional operator
+            //var epression= x>y?(logic--true):(logic--false)\
+            int x = 1, y = 2,z=3;
+            string result  = x > y ? (x>z?("x is the largest one"):("z is largest one")) : (y > z ? ("y is the largest one") : ("z is largest one"));
+
+            Console.WriteLine(z);
 
         }
 
