@@ -51,9 +51,9 @@ namespace Tabish_Console
 
             Console.WriteLine("Enter the number for which you want a table to print");
             int number = Convert.ToInt32(Console.ReadLine());
-             string message=Table(number);
+            // string message=Table(number);
 
-            Console.WriteLine(message);
+           // Console.WriteLine(message);
             //Console.WriteLine("");
             Console.ReadLine();
 
