@@ -4,102 +4,95 @@ namespace Tabish_Console
 {
     class Program : Table
     {
- 
+        
         static void Main()
         {
+            //Write a C# Sharp program to find the sum of the first 10 natural numbers.
+            //1,2,3,4,5,6,7,8,9,10=1+2+3+----
 
-            //Write a C# Sharp program to read the value of an integer m and display the value of n is 1 when m is larger than 0,
-            //0 when m is 0 and -1 when m is less than 0.
-            // DisplayFlagValue();
+            //Console.WriteLine("Enter the index of natural number");
+            //int limit = Convert.ToInt32(Console.ReadLine());
 
-            ////Write a C# Sharp program to find the largest of three numbers||lowest ||Eldest|younger
-            ////1. we will take three integer number from user but that should be in main
-            ////2.Business will be inside LargestAmongsThree() so we have to pass by value all three inputs
-            ////After calculation the methods should return the message lioke " {x} is laregst among three " to the caller method and the caller metod will print the message
+            //int result=CalculateSumofNnaturalNumbers(limit);
+            //Console.WriteLine(result>0?$"the resul={result}":"input is not a natural number");
 
-            //// we will take three integer number from user but that should be in main
-            //int num1, num2, num3;
-            //Console.WriteLine("Enter three numbers");
-            //num1 = Convert.ToInt32(Console.ReadLine());
-            //num2 = Convert.ToInt32(Console.ReadLine());
-            //num3 = Convert.ToInt32(Console.ReadLine());
+            //Write a program in C# Sharp to display the multiplication table vertically from 1 to n.
+            //Console.WriteLine("Entyer the starting point for table print");
+            //int startingPoint = Convert.ToInt32(Console.ReadLine());
 
-            ////pass the values
-            //string message1 = LargestAmongsThree(num1, num2, num3);
-            //Console.WriteLine(message1);
-            //string message= LargestAmongsThreeUisngConditionalOperator(num1,num2,num3);
-            //Console.WriteLine(message);
+            //Console.WriteLine("Entyer the Ending point for table print");
+            //int endingPoint = Convert.ToInt32(Console.ReadLine());
 
+            //PrintTable(startingPoint, endingPoint);
 
-            //Write a C# Sharp program to accept a coordinate point in an XY coordinate system and determine in which quadrant the coordinate point lies.
+            /*
+             * Menu Driven Proigram
+             * Orders please
+             * 1)Main course
+             * 2)Drinks
+             * 3)Starter
+             * 4)I am done log off 
+             * 
+             * 
+             * 1
+             * Enter the main course item from below
+             * Do you want Butter chicken---y/n
+             * Do you want Bread as well--y/n
+             * Do you want to again on main course---y/n
+             * y
+             * Enter the main course item from below
+             * Do you want Butter chicken---y/n
+             * Do you want Bread as well--y/n
+             * Do you want to again on main course---y/n
+             * 
+             * Do you want to go for main menu --y
+             * Menu Driven Proigram
+             * Orders please
+             * 1)Main course
+             * 2)Drinks
+             * 3)Starter
+             * 4)I am done log off 
+             * 
+             * */
 
-            // get the co-ordinates
-            int x = 0, y = 0;
-
-            string message=FindQuadrants(x, y);
             Console.ReadLine();
 
         }
 
-        private static string FindQuadrants(int x,int y)
+        private static void PrintTable(int startingPoint, int endingPoint)
         {
-            return "";
-        }
-
-        private static string LargestAmongsThree(int num1,int num2,int num3)
-        {
-            if (num1>num2)
+            for (int j = startingPoint; j <=endingPoint; j++)
             {
-                if (num1>num3)
+                Console.WriteLine($"Table for {j} started now....");
+                for (int i = 1; i <= 10; i++)
                 {
-                    return $"Largest number is {num1}";
+                    Console.WriteLine(i*j);
                 }
-                else
-                {
-                    return $"Largest number is {num3}";
-                }
-
+                Console.WriteLine($"Table for {j} ends here...");
+                Console.WriteLine("********************");
             }
 
-            else
-            {
-                if (num2 > num3)
-                {
-                    return $"Largest number is {num2}";
-                }
-                else
-                {
-                    return $"Largest number is {num3}";
-                }
-            }
             
         }
-        private static string LargestAmongsThreeUisngConditionalOperator(int num1, int num2, int num3)
-        {
-            string message = num1 > num2 ? (num1 > num3 ? $"Largest number is {num1}" : $"Largest number is {num3}") : (num2 > num3 ? $"Largest number is {num2}" : $"Largest number is {num3}");
-            return message;
 
+        private static int CalculateSumofNnaturalNumbers(int limit)
+        {
+            int sum = 0;
+            
+            if (limit>0)
+            {
+                for (int i = 1; i <= limit; i++)
+                {
+                    sum = sum + i;//sum=1--sum=1+2=3sum=3
+                }
+                return sum;
+            }
+
+            return limit;
+           
+            
         }
 
-        private static void DisplayFlagValue()
-        {
-            Console.WriteLine("Enter the integer value");
-            int m = Convert.ToInt32(Console.ReadLine());
-            int n = -1;
-            if (m>0)
-            {
-                n = 1;
-                Console.WriteLine($"The value of n is {n} for the value of m as  {m}");
-            }
-            else if (m==0)
-            {
-                n = 0;
-                Console.WriteLine($"The value of n is {n} for the value of m as {m}");
-            }
-            else
-            {
-                Console.WriteLine($"The value of n is {n} for the value of m as {m}");
-            }
-        }
+
     }
 }
