@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program -MenuDrivenExercisecs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Program_Previous.cs" />
     <Compile Include="Program_DecisionControl.cs" />

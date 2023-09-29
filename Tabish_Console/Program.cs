@@ -4,95 +4,108 @@ namespace Tabish_Console
 {
     class Program : Table
     {
-        
+
         static void Main()
         {
-            //Write a C# Sharp program to find the sum of the first 10 natural numbers.
-            //1,2,3,4,5,6,7,8,9,10=1+2+3+----
+            //WAP to input user roll numbers store it as an array and display once user done with input
+            //datattype[] arr=new datatype[size] 
+            //int[] arrRollNumbers = new int[10];//0,0,0,0,0,0,0---
+            //Console.WriteLine(arrRollNumbers[5]);
 
-            //Console.WriteLine("Enter the index of natural number");
-            //int limit = Convert.ToInt32(Console.ReadLine());
+            //int size = GetSizeofAnArray();
+            //int[] records = InputUserRollNumbers(size);
 
-            //int result=CalculateSumofNnaturalNumbers(limit);
-            //Console.WriteLine(result>0?$"the resul={result}":"input is not a natural number");
+            //DisplayRollNumbers(records);
 
-            //Write a program in C# Sharp to display the multiplication table vertically from 1 to n.
-            //Console.WriteLine("Entyer the starting point for table print");
-            //int startingPoint = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("tell me no of rows");
+            //int rows = Convert.ToInt32(Console.ReadLine());
 
-            //Console.WriteLine("Entyer the Ending point for table print");
-            //int endingPoint = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("tell me no of columns");
+            //int columns = Convert.ToInt32(Console.ReadLine());
 
-            //PrintTable(startingPoint, endingPoint);
+            //int[,] records = new int[rows, columns];
 
-            /*
-             * Menu Driven Proigram
-             * Orders please
-             * 1)Main course
-             * 2)Drinks
-             * 3)Starter
-             * 4)I am done log off 
-             * 
-             * 
-             * 1
-             * Enter the main course item from below
-             * Do you want Butter chicken---y/n
-             * Do you want Bread as well--y/n
-             * Do you want to again on main course---y/n
-             * y
-             * Enter the main course item from below
-             * Do you want Butter chicken---y/n
-             * Do you want Bread as well--y/n
-             * Do you want to again on main course---y/n
-             * 
-             * Do you want to go for main menu --y
-             * Menu Driven Proigram
-             * Orders please
-             * 1)Main course
-             * 2)Drinks
-             * 3)Starter
-             * 4)I am done log off 
-             * 
-             * */
+            //Demo2D(records);
+
+            JaggedArrayDemo();
 
             Console.ReadLine();
 
         }
 
-        private static void PrintTable(int startingPoint, int endingPoint)
+        private static void JaggedArrayDemo()
         {
-            for (int j = startingPoint; j <=endingPoint; j++)
+            int[][] data= new int[3][];
+            data[0] = new int[2];
+            data[1] = new int[1];
+            data[2] = new int[3];
+
+            for (int i = 0; i < data.Length; i++)
             {
-                Console.WriteLine($"Table for {j} started now....");
-                for (int i = 1; i <= 10; i++)
+                for (int j = 0; j < data[i].Length; j++)
                 {
-                    Console.WriteLine(i*j);
+                    Console.WriteLine(data[i][j]);
                 }
-                Console.WriteLine($"Table for {j} ends here...");
-                Console.WriteLine("********************");
             }
 
-            
         }
 
-        private static int CalculateSumofNnaturalNumbers(int limit)
+        public static void Demo2D(int[,] array_2d)
         {
-            int sum = 0;
-            
-            if (limit>0)
+            Console.WriteLine("Enter data ");
+            for (int i = 0; i < array_2d.GetLength(0); i++)
             {
-                for (int i = 1; i <= limit; i++)
+                for (int j = 0; j < array_2d.GetLength(1); j++)
                 {
-                    sum = sum + i;//sum=1--sum=1+2=3sum=3
+                    array_2d[i, j] = Convert.ToInt32(Console.ReadLine());
                 }
-                return sum;
             }
 
-            return limit;
-           
-            
+
+            Console.WriteLine("***********Records added in 2 d as*********");
+
+            for (int i = 0; i < array_2d.GetLength(0); i++)
+            {
+                for (int j = 0; j < array_2d.GetLength(1); j++)
+                {
+                    Console.Write(array_2d[i,j]+"\t");
+                }
+
+                Console.WriteLine();
+            }
         }
 
+        private static void DisplayRollNumbers(int[] records)
+        {
+             Array.Sort(records);//ascending 
 
+             Array.Reverse(records);
+
+            for (int i = 0; i < records.Length; i++)
+            {
+                Console.WriteLine($"Roll numbers {i + 1}:{records[i]}");
+            }
+        }
+
+        private static int[] InputUserRollNumbers(int size)
+        {
+            int[] rollNumbers = new int[size];
+
+            Console.WriteLine("Enter roll numbers");
+            for (int i = 0; i < rollNumbers.Length; i++)
+            {
+                rollNumbers[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            return rollNumbers;
+
+        }
+
+        private static int GetSizeofAnArray()
+        {
+            Console.WriteLine("Enter the number of user for which roll number has to capture:");
+            int count = Convert.ToInt32(Console.ReadLine());
+            return count;
+        }
     }
 }
