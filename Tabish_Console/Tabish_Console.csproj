@@ -58,8 +58,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OOP\Launcher.cs" />
+    <Compile Include="OOP\Sample.cs" />
+    <Compile Include="Program - Array.cs" />
     <Compile Include="Program -MenuDrivenExercisecs.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Program-test.cs" />
     <Compile Include="Program_Previous.cs" />
     <Compile Include="Program_DecisionControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
