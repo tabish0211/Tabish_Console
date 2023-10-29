@@ -135,161 +135,377 @@ namespace Tabish_Console.OOP
         //}
 
 
+        //public static void Main()
+        //{
+        //    // Console.WriteLine($"Enter the capacity for the {DateTime.Now.Year}");
+        //    // int capcity = Convert.ToInt32(Console.ReadLine());
+
+        //    // StudentsStrenghth obj = new StudentsStrenghth(capcity);
+
+        //    // Console.WriteLine(obj.capacity);
+        //    //// obj.capacity = 300;
+        //    //// StudentsStrenghth.capacity = 200;
+        //    // //Console.WriteLine(StudentsStrenghth.capacity);
+
+        //    //string str = "Rakesh";//string immutable 
+        //    //str = str + " " + "Kumar";
+
+        //    //string data = string.Empty;
+        //    //for (int i = 0; i < length; i++)
+        //    //{
+        //    //    data += data + " ";//new string data object---bulky
+        //    //}
+
+
+        //    //StringBuilder str = new StringBuilder();//Mutable
+        //    //str.Append("Rakesh");
+        //    //str.Append(" ");
+        //    //str.Append("Kumar");
+
+        //    //Console.WriteLine(str.ToString()); ;
+
+        //    //StudentsStrenghth students = new StudentsStrenghth(10);
+        //    //students.Name = "Rakesh";
+        //    //students.RollNo = 1001;
+        //    //students.Class = 10;
+
+        //    ////object initialiser
+        //    //var student = new StudentsStrenghth(10)
+        //    //{
+
+        //    //    Name = "Rakesh",
+        //    //    RollNo = 1001,
+        //    //    Class = 10
+        //    //};
+
+        //    //var myrecords=KeywordsDemo.TupleDemo();
+        //    //Console.WriteLine($"{myrecords.Item1[0]}  {myrecords.Item2} {myrecords.Item3}");
+
+        //    //Console.WriteLine("enetr the size");
+        //    //int size = Convert.ToInt32(Console.ReadLine());
+        //    //StudentsStrenghth[] arrStudents=new StudentsStrenghth[size];
+
+        //    //List<StudentsStrenghth> students = new List<StudentsStrenghth>();
+        //    //StudentsStrenghth s1 = new StudentsStrenghth{ Name = "Maya", Class = 1, RollNo = 2001 };
+        //    //StudentsStrenghth s2 = new StudentsStrenghth { Name = "Maya", Class = 1, RollNo = 2001 };
+
+        //    //students.Add(s1);
+        //    //students.Add(s2);
+
+        //    //var students = new List<StudentsStrenghth>
+
+        //    //{
+        //    //new StudentsStrenghth{ Name = "Maya", Class = 1, RollNo = 2001 },
+        //    //new StudentsStrenghth { Name = "Maya", Class = 1, RollNo = 2001 }
+
+
+        //    //};
+
+
+        //    //foreach (var item in students)
+        //    //{
+        //    //    Console.WriteLine($"{item.Name} {item.RollNo} {item.Class}");
+        //    //}
+
+        //    //ArrayList arrList=new ArrayList {
+        //    //new StudentsStrenghth{ Name = "Maya", Class = 1, RollNo = 2001 },
+        //    //new StudentsStrenghth { Name = "Maya", Class = 1, RollNo = 2001 },
+        //    //"Rahul"
+
+
+        //    //};
+
+        //    //foreach (var item in arrList)
+        //    //{
+        //    //    if (item.GetType().Equals(typeof(StudentsStrenghth)))
+        //    //    {
+        //    //        var student = (StudentsStrenghth)item;
+        //    //        Console.WriteLine($"{student.Name} {student.RollNo} {student.Class}");
+        //    //    }
+        //    //    else
+        //    //    {
+        //    //        Console.WriteLine(item);
+        //    //    }
+
+        //    //}
+
+        //    //            Console.WriteLine(arrStudents.Length);
+
+
+        //    //int Maharashtra = 12000;
+        //    //int TamilNadu = 30000;
+        //    //int Delhi = 50000;
+
+        //    //int Dubai = 80000;
+        //    //int abudhabi = 20000;
+
+        //    //int IndiaPopulation = Maharashtra + TamilNadu + Delhi;
+        //    //int UAEPopulation = Dubai + abudhabi;
+
+        //    //Dictionary<string, int> countryPopulation = new Dictionary<string, int>();
+        //    //countryPopulation.Add("India", IndiaPopulation);
+        //    //countryPopulation.Add("uaePopulation", UAEPopulation);
+
+        //    ////from yopu said
+
+        //    //countryPopulation.TryGetValue("India", out int populationofIndia);
+        //    //countryPopulation.TryGetValue("uaePopulation", out int populationofUAE);
+
+        //    //Console.WriteLine($"Population of India ={populationofIndia} and population of UAE={populationofUAE}");
+
+        //    //List<string> countries = new List<string>() {
+        //    //"India","Singapore"
+
+        //    //};
+
+
+
+        //    List<int> lstOne = new List<int> { 1, 2, 3 };
+        //    List<int> lsttwo = new List<int> { 1, 2, 3 };
+
+        //    //List<List<int>> lstodLst = new List<List<int>> {
+        //    //lstOne,
+        //    //lsttwo
+        //    //};
+
+        //    List<List<int>> lstodLst = new List<List<int>>();
+        //    lstodLst.Add(lstOne);
+        //    lstodLst.Add(lsttwo);
+
+
+        //    foreach (var lst in lstodLst)
+        //    {
+        //        foreach (var item in lst)
+        //        {
+        //            Console.WriteLine(item);
+        //        }
+        //    }
+
+
+
+
+        //    Console.ReadLine();
+
+        //}
+
+        //public static void Main() {
+
+        //    //var demo = new KeywordsDemo();
+        //    //demo.Show();
+
+        //    //var demo = new KeywordsDemo();
+        //    //demo.Show();
+
+        //    //var demo = new KeywordsDemo();
+        //    //demo.Show();
+
+        //    //var demo = new KeywordsDemo();
+        //    //demo.Show();
+
+
+        //    try
+        //    {
+
+
+        //        //try
+        //        //{
+        //        //    int x = 1, y = 0;
+        //        //    int z = x / y;
+        //        //}
+        //        //catch (Exception)
+        //        //{
+
+
+        //        //}
+
+
+        //        //string str = null;
+        //        //Console.WriteLine(str.Length);
+
+        //        //IO related work
+        //        //IO channel---
+        //        //During reading of file ---
+
+        //        int x1 = 1, y1 = 0;
+        //        //if (y1 == 0) throw new DivideByZeroException("Hey user please try again with correct data");
+        //        if (y1 == 0) throw new MyException("Hey user please try again with correct data");
+        //        int z1 = x1 / y1;
+
+
+        //        //try
+        //        //{
+
+
+
+
+        //        //}
+        //        //catch (DivideByZeroException nestedEx)
+        //        //{
+        //        //    throw;
+        //        //    //Console.WriteLine(nestedEx.Message);
+        //        //}
+
+        //        //finally
+        //        //{
+
+        //        //    Console.WriteLine("I a, nested finally");
+        //        //}
+        //    }
+
+        //    catch (MyException ex)
+        //    {
+        //        Console.WriteLine(ex.Message);
+        //    }
+
+        //    catch (DivideByZeroException ex)
+        //    {
+        //        Console.WriteLine(ex.Message);
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        Console.WriteLine(ex.Message);
+        //    }
+        //    finally {
+
+        //        Console.WriteLine("I am parent finally");
+        //        //release code
+        //    }
+        //    //int x = 1, y = 0;
+        //    //int z = x / y;
+
+        //    Console.WriteLine("still code running");
+        //    Console.ReadLine();
+
+
+        //}
+
         public static void Main()
         {
-            // Console.WriteLine($"Enter the capacity for the {DateTime.Now.Year}");
-            // int capcity = Convert.ToInt32(Console.ReadLine());
 
-            // StudentsStrenghth obj = new StudentsStrenghth(capcity);
+            ////reference site for linq 
+            ////https://www.tutorialsteacher.com/linq/linq-filtering-operators-where
+            //string[] names = { "Bill", "Steve", "James", "Mohan" };
 
-            // Console.WriteLine(obj.capacity);
-            //// obj.capacity = 300;
-            //// StudentsStrenghth.capacity = 200;
-            // //Console.WriteLine(StudentsStrenghth.capacity);
-
-            //string str = "Rakesh";//string immutable 
-            //str = str + " " + "Kumar";
-
-            //string data = string.Empty;
-            //for (int i = 0; i < length; i++)
+            //foreach (var item in names)
             //{
-            //    data += data + " ";//new string data object---bulky
+            //    Console.WriteLine(item);
+            //}
+
+            ////Only names which carries letter 'a'
+
+            //Console.WriteLine("Filtered data");
+            ////var mynewcollection = from name in names
+            ////                      where name.Contains('a')
+            ////                      select name;
+
+            //var mycollection1 = names.Where(name => name.Contains('a'));
+
+            //foreach (var item in mycollection1)
+            //{
+            //    Console.WriteLine(item);
             //}
 
 
-            //StringBuilder str = new StringBuilder();//Mutable
-            //str.Append("Rakesh");
-            //str.Append(" ");
-            //str.Append("Kumar");
+            LinqWhereDemo();
 
-            //Console.WriteLine(str.ToString()); ;
-
-            //StudentsStrenghth students = new StudentsStrenghth(10);
-            //students.Name = "Rakesh";
-            //students.RollNo = 1001;
-            //students.Class = 10;
-
-            ////object initialiser
-            //var student = new StudentsStrenghth(10)
-            //{
-
-            //    Name = "Rakesh",
-            //    RollNo = 1001,
-            //    Class = 10
-            //};
-
-            //var myrecords=KeywordsDemo.TupleDemo();
-            //Console.WriteLine($"{myrecords.Item1[0]}  {myrecords.Item2} {myrecords.Item3}");
-
-            //Console.WriteLine("enetr the size");
-            //int size = Convert.ToInt32(Console.ReadLine());
-            //StudentsStrenghth[] arrStudents=new StudentsStrenghth[size];
-
-            //List<StudentsStrenghth> students = new List<StudentsStrenghth>();
-            //StudentsStrenghth s1 = new StudentsStrenghth{ Name = "Maya", Class = 1, RollNo = 2001 };
-            //StudentsStrenghth s2 = new StudentsStrenghth { Name = "Maya", Class = 1, RollNo = 2001 };
-
-            //students.Add(s1);
-            //students.Add(s2);
-
-            //var students = new List<StudentsStrenghth>
-
-            //{
-            //new StudentsStrenghth{ Name = "Maya", Class = 1, RollNo = 2001 },
-            //new StudentsStrenghth { Name = "Maya", Class = 1, RollNo = 2001 }
-
-
-            //};
-
-
-            //foreach (var item in students)
-            //{
-            //    Console.WriteLine($"{item.Name} {item.RollNo} {item.Class}");
-            //}
-
-            //ArrayList arrList=new ArrayList {
-            //new StudentsStrenghth{ Name = "Maya", Class = 1, RollNo = 2001 },
-            //new StudentsStrenghth { Name = "Maya", Class = 1, RollNo = 2001 },
-            //"Rahul"
-
-
-            //};
-
-            //foreach (var item in arrList)
-            //{
-            //    if (item.GetType().Equals(typeof(StudentsStrenghth)))
-            //    {
-            //        var student = (StudentsStrenghth)item;
-            //        Console.WriteLine($"{student.Name} {student.RollNo} {student.Class}");
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine(item);
-            //    }
-
-            //}
-
-            //            Console.WriteLine(arrStudents.Length);
-
-
-            //int Maharashtra = 12000;
-            //int TamilNadu = 30000;
-            //int Delhi = 50000;
-
-            //int Dubai = 80000;
-            //int abudhabi = 20000;
-
-            //int IndiaPopulation = Maharashtra + TamilNadu + Delhi;
-            //int UAEPopulation = Dubai + abudhabi;
-
-            //Dictionary<string, int> countryPopulation = new Dictionary<string, int>();
-            //countryPopulation.Add("India", IndiaPopulation);
-            //countryPopulation.Add("uaePopulation", UAEPopulation);
-
-            ////from yopu said
-
-            //countryPopulation.TryGetValue("India", out int populationofIndia);
-            //countryPopulation.TryGetValue("uaePopulation", out int populationofUAE);
-
-            //Console.WriteLine($"Population of India ={populationofIndia} and population of UAE={populationofUAE}");
-
-            //List<string> countries = new List<string>() {
-            //"India","Singapore"
-
-            //};
-
-
-
-            List<int> lstOne = new List<int> { 1, 2, 3 };
-            List<int> lsttwo = new List<int> { 1, 2, 3 };
-
-            //List<List<int>> lstodLst = new List<List<int>> {
-            //lstOne,
-            //lsttwo
-            //};
-
-            List<List<int>> lstodLst = new List<List<int>>();
-            lstodLst.Add(lstOne);
-            lstodLst.Add(lsttwo);
-
-
-            foreach (var lst in lstodLst)
-            {
-                foreach (var item in lst)
-                {
-                    Console.WriteLine(item);
-                }
-            }
-
-
+            //OrderbyDemo();
 
 
             Console.ReadLine();
 
+
         }
+
+        private static void OrderbyDemo()
+        {
+            IList<Student> studentList = new List<Student>() {
+                new Student() { StudentID = 1, StudentName = "John", Age = 13} ,
+                new Student() { StudentID = 2, StudentName = "Moin",  Age = 21 } ,
+                new Student() { StudentID = 3, StudentName = "Bill",  Age = 13 } ,
+                new Student() { StudentID = 4, StudentName = "Ram" , Age = 20} ,
+                new Student() { StudentID = 5, StudentName = "Ron" , Age = 15 }
+             };
+
+            //var sorteCollection = studentList.OrderBy(student => student.Age).ThenBy(student => student.StudentName).ToList();
+
+            //foreach (var item in sorteCollection)
+            //{
+            //    Console.WriteLine($"{item.StudentID} {item.StudentName} {item.Age}");
+            //}
+
+
+            //Console.WriteLine("********************");
+            //var sorteCollectionDesc = studentList.OrderByDescending(student => student.Age).ThenByDescending(student => student.StudentName).ToList();
+
+            //foreach (var item in sorteCollectionDesc)
+            //{
+            //    Console.WriteLine($"{item.StudentID} {item.StudentName} {item.Age}");
+            //}
+
+
+            //select
+
+
+        }
+
+        private static void LinqWhereDemo()
+        {
+            //IList<Student> studentList = new List<Student>() {
+            //    new Student() { StudentID = 1, StudentName = "John", Age = 13} ,
+            //    new Student() { StudentID = 2, StudentName = "Moin",  Age = 21 } ,
+            //    new Student() { StudentID = 3, StudentName = "Bill",  Age = 18 } ,
+            //    new Student() { StudentID = 4, StudentName = "Ram" , Age = 20} ,
+            //    new Student() { StudentID = 5, StudentName = "Ron" , Age = 15 }
+            // };
+
+            //var myfilteredStudents = studentList.Where(student => student.Age > 13 && student.Age < 20).ToList();
+
+            //foreach (var item in myfilteredStudents)
+            //{
+            //    Console.WriteLine($"{item.StudentID} {item.StudentName} {item.Age}");
+
+
+            //}
+
+
+            //var myfilteredStudents = studentList.Where(student => student.Age > 13 && student.Age < 20).
+            //                            Select(Student => new { Name = Student.StudentName, Id = Student.StudentID }).ToList();
+
+            //foreach (var item in myfilteredStudents)
+            //{
+            //    Console.WriteLine($"{item.Name} {item.Id} ");
+
+
+            //}
+            ////1--------------1000000
+            //if (myfilteredStudents.Any(s=>s.Id>1))
+            //{
+            //    //do something
+
+            //}
+
+
+
+           // Two,Four
+            IList<String> strList = new List<String>() { "One", "Two", "Three", "Four", "Five" };
+
+            var commaSeperatedString = strList.;
+            Console.WriteLine(commaSeperatedString);
+
+        }
+
+        class Student
+        {
+
+            public int StudentID { get; set; }
+
+            public string StudentName { get; set; }
+            public int Age { get; set; }
+        }
+
+
     }
-
-
 }
 
 

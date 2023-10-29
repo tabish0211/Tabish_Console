@@ -8,26 +8,49 @@ namespace Tabish_Console.OOP
 {
     public class KeywordsDemo
     {
-        public void Sum(ref int x, ref int y, out int z, out int m)
+
+        public KeywordsDemo()
         {
-            x = 3; y = 5;
-            z = x + y;
-            m = x - y;
+
+            //try
+            //{
+
+            //    int x = 1, y = 0;
+            //    int z = x / y;
+            //}
+            //catch (Exception ex)
+            //{
+
+
+            //}
+
+        }
+
+        public void Show()
+        {
+
+            Console.WriteLine("Hello how are you");
+        }
+        //public void Sum(ref int x, ref int y, out int z, out int m)
+        //{
+        //    x = 3; y = 5;
+        //    z = x + y;
+        //    m = x - y;
            
-        }
+        //}
 
 
-        public static Tuple<string[],int,double> TupleDemo()
-        {
-            string[] str = { "A", "B", "C" };
-            string name = "Rakesh";
-            int salary = 10000;
-            double hra = 100.00;
+        //public static Tuple<string[],int,double> TupleDemo()
+        //{
+        //    string[] str = { "A", "B", "C" };
+        //    string name = "Rakesh";
+        //    int salary = 10000;
+        //    double hra = 100.00;
 
-           return Tuple.Create(str, salary,hra);
+        //   return Tuple.Create(str, salary,hra);
 
 
-        }
+        //}
 
     }
 
@@ -58,6 +81,16 @@ namespace Tabish_Console.OOP
 
 
 
+    }
+
+
+    class MyException:Exception
+    {
+
+        public MyException(string message):base(message)
+        {
+
+        }
     }
 
 }
