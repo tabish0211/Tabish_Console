@@ -1,0 +1,52 @@
+﻿--create database students_db
+--sp_renamedb 'students_dbo','students_db'
+---drop database students_db
+
+
+--use students_db
+--CREATE TABLE student(Rid int , sname varchar(50),class int)
+
+--CREATE TABLE student(Rid int primary key, sname varchar(50),class int)
+
+---drop table student
+--sp_rename 'student_tbl','student'
+----------'current/old table','newtable'
+
+
+--name varchar(50)----max--50---dynamic---30
+--name char(50)---max--50--constant---30---20 wasted
+--gender char(1)--'M'|'F'
+
+--alter command
+alter table student alter column sname varchar(60)
+
+alter table student add  Fee money
+
+alter table student drop column gender
+
+sp_rename 'student.sname','s_name'
+
+Select 'Tabish Ahmad' as FullName
+Select * from student
+Select Rid,s_name from student
+
+Insert into student values(1001,'Kamlesh',2,'M',10000)
+Insert into student(s_name,Rid,class,gender,Fee) values('Mahesh',1002,1,'M',10000)
+
+update student set s_name='Maya',Fee=8000,gender='F' where Rid=1002
+
+--constaints---Primary key
+
+delete from student where s_name='Kamlesh'
+
+alter table student alter column Rid int not null
+alter table student add constraint pk primary key(Rid)
+
+-----
+CREATE TABLE student(Rid int identity(1001,1), sname varchar(50),class int,gender char(1),Fee money)
+
+insert into student values('Kamlesh',1,'M',8000)
+insert into student values('Irfan',1,'M',13000),('Suresh',1,'M',12000)
+
+Select * from student
+
