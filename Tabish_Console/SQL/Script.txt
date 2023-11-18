@@ -50,3 +50,105 @@ insert into student values('Irfan',1,'M',13000),('Suresh',1,'M',12000)
 
 Select * from student
 
+
+
+-------18-11-2023
+select * from student
+
+select * from classmapper
+
+
+
+select s.rid,s.sname,s.gender,s.fee, c.classnumber  from student s inner join classmapper c on  s.rid=c.rollnumber
+
+select s.rid,s.sname,s.gender,s.fee, c.classnumber  from student s left outer join classmapper c on  s.rid=c.rollnumber
+
+select s.rid,s.sname,s.gender,s.fee, c.classnumber  from student s right outer join classmapper c on  s.rid=c.rollnumber
+select s.rid,s.sname,s.gender,s.fee, c.classnumber  from student s full outer join classmapper c on  s.rid=c.rollnumber
+
+**************
+use students_db
+
+select * from student
+
+select SUM(fee) as total_fee_collected from student
+select Avg(fee) as Avg_fee from student
+select Max(fee) as max_fee from student
+select Min(fee) as min_fee from student
+
+select count(Rid) as Current_TotalRecords from student
+
+select * from student where rid=1001
+select sname as student_name from student where rid=1001
+select upper(sname) as student_name_In_UpperCase from student where rid=1001
+
+select lower(sname) as student_name_In_UpperCase from student where rid=1001
+
+select SUBSTRING(sname,2,4)  as student_name_substr from student where rid=1001
+
+--select SUBSTRING('car',2,4)
+
+select LEN('Tabish') as character_count
+select LEN(sname) as student_name_Len from student where rid=1001
+
+select * from student where LEN(sname)>4
+
+--between 
+select * from student where LEN(sname) between 5 and 6
+
+select * from student where Rid  between 1001 and 1003
+select * from student where Rid not between 1001 and 1003
+--In--list values --whatever 
+select * from student where rid in(1001,1002,1,2,3,1003,1004)
+select * from student where rid not in(1001,1002,1003,1,2)
+
+
+select * from student where class=1 and fee=8000
+select * from student where class=1 or fee=8000
+
+select * from student where fee !=8000
+select * from student where sname !=''
+
+
+--insert into emp_tbl values(2001,'Surya',GETDATE())
+--insert into emp_tbl values(2002,'Hari babu',GETDATE())
+--insert into emp_tbl values(2002,'Hari babu',GETDATE())
+--insert into emp_tbl values(2003,'Chetan',GETDATE())
+--insert into emp_tbl values(2004,'Nivethitha',GETDATE())
+--insert into emp_tbl values(2005,'Ashish',GETDATE())
+
+
+select * from emp_tbl
+
+select distinct * from emp_tbl
+
+--find out the occurences of each empid having duplicate
+
+select * from emp_tbl where empid in(select empid from emp_tbl  group by empid having COUNT(empid)>1)
+
+---2020--left the organisation--2021
+
+select GETDATE() as  currentDate
+select DATEADD(mm,-2,getdate()) as new_date
+
+select * from emp_tbl where empid=2001
+
+update emp_tbl set emp_date_joining=DATEADD(YY,-3,emp_date_joining) where empid=2001
+---x-y,Datediff(yy,y,x)
+Select DATEDIFF(yy,getdate(),dateadd(yy,10,getdate()))
+select DATEPART(yy,getdate()) as mydatepart
+select DATEPART(MM,getdate()) as mydatepart
+select DATEPART(DD,getdate()) as mydatepart
+
+select DATEPART(DD,emp_date_joining) as mydatepart from emp_tbl
+
+
+select * from emp_tbl order by empid asc
+select * from emp_tbl order by empid desc
+
+select * from emp_tbl order by 1 desc
+
+select * from emp_tbl order by 2 asc
+
+
+select top 3 percent  * from emp_tbl 
