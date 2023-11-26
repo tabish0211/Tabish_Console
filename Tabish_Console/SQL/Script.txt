@@ -152,3 +152,54 @@ select * from emp_tbl order by 2 asc
 
 
 select top 3 percent  * from emp_tbl 
+
+
+
+---create proc--
+--create proc Getall_sp
+--as
+--select * from student
+
+--alter proc Getall_sp 
+--@rid int
+--as
+--select * from student where Rid=@rid
+create proc GetById_sp 
+ @rid int
+as
+select * from student where Rid=@rid
+
+---call proc without param
+--exec Getall_sp
+
+exec GetById_sp 1001
+
+create proc Createstudent_SP
+@sname varchar(50),
+@class int,
+@gender char(1),
+@my_fee money
+
+As
+insert into student(sname,class,gender,Fee) values(@sname,@class,@gender,@my_fee)
+
+exec Createstudent_SP 'Ratan',2,'M',12000
+
+create proc Updatestudent_SP
+@rid int,
+@sname varchar(50),
+@my_fee money
+
+As
+update student set sname=@sname, Fee=@my_fee where Rid=@rid
+
+
+exec Updatestudent_SP 1006,'Sai',20000
+
+create proc DeleteStudent_SP
+@rid int
+
+As
+Delete from student where Rid=@rid
+
+exec DeleteStudent_SP 1006
