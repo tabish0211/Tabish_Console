@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tabish_Console.EF;
 
 namespace Tabish_Console.AdoDotnet
 {
@@ -49,13 +50,23 @@ namespace Tabish_Console.AdoDotnet
             try
             {
 
-                CRUD cRUD = new CRUD();
-                var students = cRUD.GetAll();
+                //CRUD cRUD = new CRUD();
+                //var students = cRUD.GetAll();
+
+                CRUD_EF cRUD_EF = new CRUD_EF();
+                var students = cRUD_EF.GetAll();
+
 
                 foreach ( Student item in students)
                 {
-                    Console.WriteLine($"Roll number:{item.RollNumber} | Name:{item.Name} |Class:{item.Class} | Gender:{item.Gender} | Fee : {item.Fee}");
+                    Console.WriteLine($"Roll number:{item.Id} | Name:{item.Name} |Class:{item.Class} | Gender:{item.Gender} | Fee : {item.Fee}");
                 }
+
+                var student = cRUD_EF.GetById(2);
+                Console.WriteLine($"Roll number:{student.Id} | Name:{student.Name} |Class:{student.Class} | Gender:{student.Gender} | Fee : {student.Fee}");
+
+                Console.WriteLine(  );
+
             }
             catch (Exception ex)
             {
@@ -69,8 +80,11 @@ namespace Tabish_Console.AdoDotnet
             Console.WriteLine("Enter RollNumber");
             int id = Convert.ToInt32(Console.ReadLine());
 
-            CRUD cRUD = new CRUD();
-            string result = cRUD.Delete(id);
+            //CRUD cRUD = new CRUD();
+            //string result = cRUD.Delete(id);
+
+            CRUD_EF cRUD_EF = new CRUD_EF();
+            string result = cRUD_EF.Delete(id);
             Console.WriteLine(result);
         }
 
@@ -82,13 +96,16 @@ namespace Tabish_Console.AdoDotnet
             Console.WriteLine("Enter Name");
             string name = Console.ReadLine();
 
-            Console.WriteLine("Enter Fee");
-            decimal fee = Convert.ToDecimal(Console.ReadLine());
+            //Console.WriteLine("Enter Fee");
+            //decimal fee = Convert.ToDecimal(Console.ReadLine());
 
-            Student student = new Student { RollNumber=id,Name = name, Fee = fee };
+            //Student student = new Student { Id = id,Name = name, Fee = fee };
 
-            CRUD cRUD = new CRUD();
-            string result = cRUD.Update(student);
+            //CRUD cRUD = new CRUD();
+            //string result = cRUD.Update(student);
+
+            CRUD_EF cRUD = new CRUD_EF();
+            string result = cRUD.Update(id,name);
             Console.WriteLine(result);
         }
 
@@ -102,14 +119,17 @@ namespace Tabish_Console.AdoDotnet
             int clas = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter Gender");
-            char gender = Convert.ToChar(Console.ReadLine());
+            string gender =Console.ReadLine();
 
             Console.WriteLine("Enter Fee");
             decimal fee = Convert.ToDecimal(Console.ReadLine());
 
             Student student = new Student { Name = name, Class = clas, Gender = gender, Fee = fee };
 
-            CRUD cRUD = new CRUD();
+            //CRUD cRUD = new CRUD();
+            //string result = cRUD.Add(student);
+
+            CRUD_EF cRUD = new CRUD_EF();
             string result = cRUD.Add(student);
             Console.WriteLine(result);
         }

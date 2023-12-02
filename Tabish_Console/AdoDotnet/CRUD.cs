@@ -63,7 +63,7 @@ namespace Tabish_Console.AdoDotnet
             SqlCommand cmd = new SqlCommand(cmd_str, con);
             cmd.CommandType = CommandType.Text;
             //optional step
-            cmd.Parameters.AddWithValue("@rid", student.RollNumber);
+            cmd.Parameters.AddWithValue("@rid", student.Id);
             cmd.Parameters.AddWithValue("@sname", student.Name);          
             cmd.Parameters.AddWithValue("@my_fee", student.Fee);
 
@@ -136,12 +136,12 @@ namespace Tabish_Console.AdoDotnet
                 students = new List<Student>();
                 while (reader.Read())
                 {
-                    Student s = new Student { 
-                        
-                        RollNumber = Convert.ToInt32(reader["Rid"].ToString()),
+                    Student s = new Student {
+
+                        Id = Convert.ToInt32(reader["Rid"].ToString()),
                         Name= reader["sname"].ToString(),
                         Class= Convert.ToInt32(reader["class"].ToString()),
-                        Gender = Convert.ToChar(reader["gender"].ToString()),
+                        Gender = reader["gender"].ToString(),
                         Fee= Convert.ToDecimal(reader["Fee"].ToString()),
                     };
 

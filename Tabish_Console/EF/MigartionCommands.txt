@@ -1,0 +1,5 @@
+﻿Enable-Migrations
+
+add-migration CreateStudentTable
+
+update-database
